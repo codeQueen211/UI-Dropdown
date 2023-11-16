@@ -1,0 +1,45 @@
+body{
+   background-color: rgb(237, 142, 158);
+}
+.container{
+    width: 400px;
+    margin: 200px auto;
+    border: 2px solid rgb(15, 142, 136);;
+}
+summary{
+    font-size: 25px;
+    background: lightseagreen;
+    cursor: pointer;
+    outline: none; /*to remove blue line once clicking on a user*/
+    padding: 5px; /*to have the errow a bit far away from the border*/
+}
+summary:hover{
+    background: rgb(6, 166, 158);
+}
+p{
+    font-size: larger;
+    margin: 0; /*to remove the space between the data and the title*/
+}
+section{
+    background: rgb(123, 201, 197);
+    padding: 10px; /*to add space frot the data in the section*/
+}
+details > summary{
+    list-style: none; /*remove the default errow netx to username*/
+}
+summary::after{
+    content: "+"; /*replace the errow with a plus when the summary is closed*/
+    float: left; /*let the + appear on the left side*/
+    background-color: rgb(189, 203, 215);
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+details[open] > summary::after{ 
+    content: "-"; /*if details are open replace the plus sign with a -*/
+}
+.created{
+    color: antiquewhite;
+    text-align: center;
+    margin-top: 100px;
+}
